@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Wage Gap Calculator</title>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+    <script src="scripts/d3graphs.js"></script>
+    <script src="services/services.js"></script>
+    <script src="sidebar/makebargraph.js"></script>
+    <script src="sidebar/makestatesgraph.js"></script>
+    <script src="sidebar/sidebar.js"></script>
+    <script src="scripts/index.js"></script>
+
+  </head>
+
+<<<<<<< 68c6425fdf8e2b2dcd4e1cbbea92a8008b2dc920
+  <body ng-app="wageGap" ui-view>
+=======
+  <body ng-app="wageGap">
+>>>>>>> still working on setup, debugging injection error
+
+    <aside class="sidebar">
+      <a ui-sref="home.bargraph">Bar Graph</a>
+      <a ui-sref="home.statesgraph">States Graph</a>
+      <ui-view class="sidebar"></ui-view>
+    </aside>
+    <div class="main">Hello Champions!!</div>
+
+  </body>
+
+  <footer>
+  </footer>
+
+
+</html>
