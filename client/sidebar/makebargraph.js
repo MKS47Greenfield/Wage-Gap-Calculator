@@ -1,4 +1,4 @@
-angular.module('wageGap.sidebar.makebargraph', [])
-.controller('MakeBarGraphController', function ($scope, MakeBarGraph) {
-  
+angular.module('wageGap.makebargraph', [])
+.controller('MakeBarGraphController', function ($scope) {
+
 });
