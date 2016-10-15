@@ -1,5 +1,5 @@
-//it would be good to refactor to not need two separate controllers/html skeletons for bar and state
-//since they share so much code in common
+angular.module('wageGap.makestatesgraph', [])
+.controller('MakeStatesGraphController', function ($scope) {
 
 angular.module('wageGap.makestatesgraph', [])
 .controller('MakeStatesGraphController', ['$scope', function ($scope) {
