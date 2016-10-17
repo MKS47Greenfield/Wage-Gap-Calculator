@@ -65,15 +65,27 @@ angular.module('wageGap.makestatesgraph', [])
 
   $scope.data = {
     selected: [],
-    potentials: ['Age','Gender','Occupation','Race'],
+    potentials: [
+      // 'Age',
+      'Gender',
+      'Occupation',
+      'Race'
+    ],
     profiles: [],
     profilesnum: 0,
+    options: {
+      // age: ['15-19','20-24','25-29','30-34','35-39','40-44','45-49','50-54','55-59','60-65'],
+      Gender: ['Male', 'Female'],
+      Occupation: ['Programmer'],
+      Race: ['White','African-American/Black','American Indian/Alaskan Native','Asian','Pacific Islander']
+    }
   };
 
   //initializes empty profiles with selected variables on choosing the number of people to compare
   $scope.initializeProfiles = function () {
-    Number($scope.data.profilesnum);
-    for(var i = 0; i < Number($scope.data.profilesnum) - 1; i++){
+    $scope.data.profiles = [];
+    for(var i = 0; i < Number($scope.data.profilesnum); i++){
+      // +1 /-1 to deal with 0-indexed profile array versus normal counting of number of people
       $scope.data.profiles.push({number: i + 1});
       $scope.data.selected.forEach(function(variable) {
         $scope.data.profiles[i][variable] = null;
