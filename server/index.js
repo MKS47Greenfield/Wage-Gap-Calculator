@@ -35,8 +35,6 @@ app.get('/graph', function(req, res) {
 	//     query.lastname = req.body.lastname;
 	// }
 // handle front-end get request
-app.get('/data', function(req, res) {	
-
 // check for querystring in db
 	// if it exists, return relevant cache
 	// else call api
