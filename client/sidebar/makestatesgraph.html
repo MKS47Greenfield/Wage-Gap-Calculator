@@ -25,7 +25,7 @@
       <fieldset class="values">
         <legend>Person {{person.number}}</legend>
         <div ng-repeat="variable in data.selected">
-          <label>{{variable}}<select ng-model="person.variable" ng-options="option as option for option in data.options[variable]"></select></label>
+          <label>{{variable}}<select ng-model="person[variable]" ng-options="option as option for option in data.options[variable]"></select></label>
         </div>
       </fieldset>
     </div>
