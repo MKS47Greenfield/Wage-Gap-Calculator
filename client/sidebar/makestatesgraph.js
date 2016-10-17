@@ -66,7 +66,7 @@ angular.module('wageGap.makestatesgraph', [])
   $scope.data = {
     selected: [],
     potentials: [
-      // 'Age',
+      // 'Age',//leaving out age to decrease the number of necessary API variables for basic skeleton
       'Gender',
       'Occupation',
       'Race'

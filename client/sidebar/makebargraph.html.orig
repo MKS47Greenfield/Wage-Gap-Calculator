@@ -1,3 +1,7 @@
+<<<<<<< 6e0222e83fa8d8a76b0e86bd12bb9237865db730
+<<<<<<< d1af93796ea41591de33786268bcb0be0a91f9a7
+=======
+>>>>>>> basic sidebar selects all working, now adding options for occupation
 <div>
   <div class="checkboxes" class="variables-choices">
     <fieldset class="variables">
@@ -30,5 +34,24 @@
       </fieldset>
     </div>
 
+<<<<<<< 6e0222e83fa8d8a76b0e86bd12bb9237865db730
+=======
+<div class="variables-choices">
+  <div class="checkboxes">
+    <h5>Choose Your Attributes to Compare:</h5>
+    <label>Age<input type="checkbox" name="Age" value="age"/></label>
+    <label>Gender<input type="checkbox" name="Gender" value="gender"/></label>
+    <label>Location<input type="checkbox" name="Location" value="location"/></label>
+    <label>Occupation<input type="checkbox" name="Occupation" value="occupation"/></label>
+    <label>Race<input type="checkbox" name="Race" value="race"/></label>
+    <label>How many people do you wish to compare?<select class="" name="">
+      <option value="one">1</option>
+      <option value="two">2</option>
+      <option value="three">3</option>
+      <option value="four">4</option>
+    </select></label>
+>>>>>>> sidebar checkboxes working, issues binding data from person number select
+=======
+>>>>>>> basic sidebar selects all working, now adding options for occupation
   </div>
 </div>
