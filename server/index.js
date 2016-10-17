@@ -10,7 +10,7 @@ module.exports = app;
 app.use(bodyParser.json());
 app.use(express.static('client'));
 
-// ???
+
 	// not sure if i need this or if express.static covers it ???
 	// app.get('/', function(req, res) {
 	//   res.sendFile(path.join(__dirname, '../client/index.html'));
@@ -24,6 +24,8 @@ app.use(express.static('client'));
 
 
 // handle front-end get request
+app.get('/data', function(req, res) {	
+
 // check for querystring in db
 	// if it exists, return relevant cache
 	// else call api
