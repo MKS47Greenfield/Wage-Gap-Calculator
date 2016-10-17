@@ -14,16 +14,16 @@
 
   </head>
 
-<<<<<<< 3f70cac8dfd348c59d8f6e3026f3f50a7db7e61b
-  <body ng-app="wageGap" ui-view>
-=======
   <body ng-app="wageGap">
->>>>>>> still working on setup, debugging injection error
 
     <aside class="sidebar">
       <a ui-sref="home.bargraph">Bar Graph</a>
       <a ui-sref="home.statesgraph">States Graph</a>
+<<<<<<< 637a6b4737b8a9599f7420ab4c8d154124abb0e4
       <ui-view class="sidebar"></ui-view>
+=======
+      <ui-view class=""></ui-view>
+>>>>>>> rendering tabs (super basically)
     </aside>
     <div class="main">Hello Champions!!</div>
 

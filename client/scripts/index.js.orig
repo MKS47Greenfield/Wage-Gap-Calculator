@@ -1,17 +1,17 @@
 var wageGap = angular.module('wageGap', [
   'ui.router',
+<<<<<<< 637a6b4737b8a9599f7420ab4c8d154124abb0e4
   //there's some great examples and lots of docs for Angular Material at https://material.angularjs.org/latest/
   //you call ngMaterial here basically it just implements and enables Google's Material design specs
   //(a UI component framework used similarly to how many people use Bootstrap, does a lot of design/css work for you)
+=======
+>>>>>>> rendering tabs (super basically)
   // 'ngMaterial',
   // 'material.svgAssetsCache',
   'wageGap.sidebar',
   'wageGap.makestatesgraph',
   'wageGap.makebargraph'
-<<<<<<< 3f70cac8dfd348c59d8f6e3026f3f50a7db7e61b
-=======
   // 'wageGap.landing'
->>>>>>> still working on setup, debugging injection error
 ])
 .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
 
@@ -21,11 +21,7 @@ var wageGap = angular.module('wageGap', [
     .state('home', {
       templateUrl: './../index.html',
       url: '/',
-<<<<<<< 3f70cac8dfd348c59d8f6e3026f3f50a7db7e61b
       controller: 'SidebarController'
-=======
-      controller: 'HomeController'
->>>>>>> still working on setup, debugging injection error
     })
     .state('home.bargraph', {
       templateUrl: './../sidebar/makebargraph.html',
@@ -38,9 +34,5 @@ var wageGap = angular.module('wageGap', [
       controller: 'MakeStatesGraphController'
     });
 }).run(function () {
-<<<<<<< 3f70cac8dfd348c59d8f6e3026f3f50a7db7e61b
 
-=======
-  
->>>>>>> still working on setup, debugging injection error
 });
