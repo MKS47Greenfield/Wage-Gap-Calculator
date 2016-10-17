@@ -1,3 +1,6 @@
+//it would be good to refactor to not need two separate controllers/html skeletons for bar and state
+//since they share so much code in common
+
 angular.module('wageGap.makestatesgraph', [])
 .controller('MakeStatesGraphController', ['$scope', function ($scope) {
 
@@ -14,7 +17,22 @@ angular.module('wageGap.makestatesgraph', [])
     options: {
       // age: ['15-19','20-24','25-29','30-34','35-39','40-44','45-49','50-54','55-59','60-65'],
       Gender: ['Male', 'Female'],
-      Occupation: ['Programmer'],
+      Occupation: [
+        'Agriculture, Forestry, Fishing, and Hunting, and Mining',
+        'Construction',
+        'Manufacturing',
+        'Wholesale Trade',
+        'Retail Trade',
+        'Transportation and Warehousing and Utilities',
+        'Information',
+        'Finance and Insurance, and Real Estate, and Rental and Leasing',
+        'Professional, Scientific, and Management, and Administrative, and Waste Management Services',
+        'Educational Services, and Health Care and Social Assistance',
+        'Arts, Entertainment, and Recreation, and Accommodation and Food Services',
+        'Other Services, Except Public Administration',
+        'Public Administration',
+        'Military'
+      ],
       Race: ['White','African-American/Black','American Indian/Alaskan Native','Asian','Pacific Islander']
     }
   };
