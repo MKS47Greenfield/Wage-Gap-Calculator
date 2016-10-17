@@ -25,7 +25,6 @@ app.use(express.static('client'));
 // occupation/gender | location/gender | race/gender
 // collection = Graph
 app.get('/graph', function(req, res) {
-
 	var query = req.body;
 
 	// if (req.body.firstname) {
@@ -35,6 +34,15 @@ app.get('/graph', function(req, res) {
 	// if (req.body.lastname) {
 	//     query.lastname = req.body.lastname;
 	// }
+// handle front-end get request
+app.get('/data', function(req, res) {	
+
+// check for querystring in db
+	// if it exists, return relevant cache
+	// else call api
+		// then send data to front-end
+		// and send data to db to cache
+app.get('/data', function(req, res) {
 
 
 	Graph.find(query, function(err))
