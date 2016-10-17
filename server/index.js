@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
 var fs = require('fs');
+var request = require('request');
 
 var app = express();
 module.exports = app;
@@ -9,26 +10,35 @@ module.exports = app;
 app.use(bodyParser.json());
 app.use(express.static('client'));
 
-// not sure if i need this or if express.static covers it ???
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, '../client/index.html'));
-});
+// ???
+	// not sure if i need this or if express.static covers it ???
+	// app.get('/', function(req, res) {
+	//   res.sendFile(path.join(__dirname, '../client/index.html'));
+	// });
 
-// what will the post url be ???
-// something like data/cache
-app.post('data/cache', function(req, res) {
-	// use req.body to send objects to db
-	// res.sendStatus(200);
+	// not sure if i need a post yet ???
+	// app.post('/data/cache', function(req, res) {
+	// 	// use req.body to send objects to db
+	// 	// res.sendStatus(200);
+	// })
+
+
+// handle front-end get request
+app.get('/data', function(req, res) {	
+
+// check for querystring in db
+	// if it exists, return relevant cache
+	// else call api
+		// then send data to front-end
+		// and send data to db to cache
+
 })
 
-// if it exists, get cached data from db on api call
-app.get('data', function(req, res) {
-	
-})
 
 var port = process.env.PORT || 4040;
 app.listen(port);
 console.log('Listening on port', port);
+
 
 // --------------------------------------------
 // var knex = require('knex');
@@ -58,3 +68,9 @@ console.log('Listening on port', port);
 //       res.end(data);
 //      })
 // });
+
+
+
+
+
+
