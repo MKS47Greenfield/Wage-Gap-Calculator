@@ -24,3 +24,9 @@ fieldset{
 select{
   overflow: scroll;
 }
+fieldset{
+  max-width: 100%;
+}
+select{
+  overflow: scroll;
+}
