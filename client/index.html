@@ -14,12 +14,12 @@
 
   </head>
 
-  <body ng-app="wageGap">
+  <body ng-app="wageGap" ui-view>
 
     <aside class="sidebar">
       <a ui-sref="home.bargraph">Bar Graph</a>
       <a ui-sref="home.statesgraph">States Graph</a>
-      <ui-view class=""></ui-view>
+      <ui-view class="sidebar"></ui-view>
     </aside>
     <div class="main">Hello Champions!!</div>
 
