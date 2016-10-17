@@ -24,13 +24,18 @@ app.use(express.static('client'));
 
 
 // handle front-end get request
-app.get('/data', function(req, res) {	
-
 // check for querystring in db
 	// if it exists, return relevant cache
 	// else call api
 		// then send data to front-end
 		// and send data to db to cache
+app.get('/data', function(req, res) {	
+
+  request('http://api.census.gov/data/2015/acs1?get=NAME,B20002_003E&for=state:*', function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+    console.log(body)
+  }
+})
 
 })
 
