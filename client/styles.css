@@ -13,10 +13,13 @@ aside.sidebar{
 }
 label{
   display: block;
+<<<<<<< d1af93796ea41591de33786268bcb0be0a91f9a7
 }
 fieldset{
   max-width: 100%;
 }
 select{
   overflow: scroll;
+=======
+>>>>>>> sidebar checkboxes working, issues binding data from person number select
 }

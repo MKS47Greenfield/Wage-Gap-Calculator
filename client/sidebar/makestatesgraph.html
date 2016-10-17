@@ -25,7 +25,11 @@
       <fieldset class="values">
         <legend>Person {{person.number}}</legend>
         <div ng-repeat="variable in data.selected">
+<<<<<<< d1af93796ea41591de33786268bcb0be0a91f9a7
           <label>{{variable}}<select ng-model="person[variable]" ng-options="option as option for option in data.options[variable]"></select></label>
+=======
+          <label>{{variable}}<select ng-options="[1,2,3]"></select></label>
+>>>>>>> sidebar checkboxes working, issues binding data from person number select
         </div>
       </fieldset>
     </div>

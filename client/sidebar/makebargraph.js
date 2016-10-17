@@ -67,8 +67,31 @@ angular.module('wageGap.makebargraph', [])
     }
   };
 
+<<<<<<< d1af93796ea41591de33786268bcb0be0a91f9a7
   //checks if an variable is in selected array to display it as checked or not
   $scope.exists = function (item, list) {
     return list.indexOf(item) > -1;
   };
 }]);
+=======
+  $scope.selected = [];
+
+  $scope.potentials = ['Age','Gender','Location','Occupation','Race'];
+
+  $scope.profiles = [];
+
+  $scope.toggle = function (item, list) {
+    var i = list.indexOf(item);
+    if(i > -1){
+      list.splice(i, 1);
+    } else {
+      list.push(item);
+    }
+  };
+
+  $scope.exists = function (item, list) {
+    return list.indexOf(item) > -1;
+  };
+
+});
+>>>>>>> sidebar checkboxes working, issues binding data from person number select
