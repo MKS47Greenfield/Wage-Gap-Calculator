@@ -1,11 +1,7 @@
-<<<<<<< 3f70cac8dfd348c59d8f6e3026f3f50a7db7e61b
-//it would be good to refactor to not need two separate controllers/html skeletons for bar and state
-//since they share so much code in common
-=======
 angular.module('wageGap.makestatesgraph', [])
-.controller('MakeStatesGraphController', function ($scope) {
->>>>>>> still working on setup, debugging injection error
+.controller('MakeStatesGraphController', ['$scope', function ($scope) {
 
+<<<<<<< 84e3c5aa29a1e8a7e342cafa8e4207808f4e9263
 angular.module('wageGap.makestatesgraph', [])
 .controller('MakeStatesGraphController', ['$scope', function ($scope) {
 <<<<<<< d1af93796ea41591de33786268bcb0be0a91f9a7
@@ -99,13 +95,25 @@ angular.module('wageGap.makestatesgraph', [])
       ],
       Race: ['White','African-American/Black','American Indian/Alaskan Native','Asian','Pacific Islander','Latino']
     }
+=======
+  $scope.data = {
+    selected: [],
+    potentials: ['Age','Gender','Occupation','Race'],
+    profiles: [],
+    profilesnum: 0,
+>>>>>>> sidebar checkboxes working, issues binding data from person number select
   };
 
   //initializes empty profiles with selected variables on choosing the number of people to compare
   $scope.initializeProfiles = function () {
+<<<<<<< 84e3c5aa29a1e8a7e342cafa8e4207808f4e9263
     $scope.data.profiles = [];
     for(var i = 0; i < Number($scope.data.profilesnum); i++){
       // +1 /-1 to deal with 0-indexed profile array versus normal counting of number of people
+=======
+    Number($scope.data.profilesnum);
+    for(var i = 0; i < Number($scope.data.profilesnum) - 1; i++){
+>>>>>>> sidebar checkboxes working, issues binding data from person number select
       $scope.data.profiles.push({number: i + 1});
       $scope.data.selected.forEach(function(variable) {
         $scope.data.profiles[i][variable] = null;
@@ -124,6 +132,9 @@ angular.module('wageGap.makestatesgraph', [])
     }
   };
 
+<<<<<<< 84e3c5aa29a1e8a7e342cafa8e4207808f4e9263
+>>>>>>> sidebar checkboxes working, issues binding data from person number select
+=======
 >>>>>>> sidebar checkboxes working, issues binding data from person number select
   //checks if an variable is in selected array to display it as checked or not
   $scope.exists = function (item, list) {

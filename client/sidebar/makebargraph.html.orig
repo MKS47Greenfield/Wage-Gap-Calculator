@@ -1,7 +1,4 @@
-<<<<<<< 6e0222e83fa8d8a76b0e86bd12bb9237865db730
-<<<<<<< d1af93796ea41591de33786268bcb0be0a91f9a7
-=======
->>>>>>> basic sidebar selects all working, now adding options for occupation
+<<<<<<< 84e3c5aa29a1e8a7e342cafa8e4207808f4e9263
 <div>
   <div class="checkboxes" class="variables-choices">
     <fieldset class="variables">
@@ -34,7 +31,6 @@
       </fieldset>
     </div>
 
-<<<<<<< 6e0222e83fa8d8a76b0e86bd12bb9237865db730
 =======
 <div class="variables-choices">
   <div class="checkboxes">
@@ -51,7 +47,5 @@
       <option value="four">4</option>
     </select></label>
 >>>>>>> sidebar checkboxes working, issues binding data from person number select
-=======
->>>>>>> basic sidebar selects all working, now adding options for occupation
   </div>
 </div>

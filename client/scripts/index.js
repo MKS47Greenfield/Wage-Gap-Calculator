@@ -8,7 +8,6 @@ var wageGap = angular.module('wageGap', [
   'wageGap.sidebar',
   'wageGap.makestatesgraph',
   'wageGap.makebargraph'
-  // 'wageGap.landing'
 ])
 .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
 
