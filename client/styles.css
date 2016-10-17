@@ -14,3 +14,9 @@ aside.sidebar{
 label{
   display: block;
 }
+fieldset{
+  max-width: 100%;
+}
+select{
+  overflow: scroll;
+}
