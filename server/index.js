@@ -24,6 +24,8 @@ app.use(express.static('client'));
 
 
 // handle front-end get request
+app.get('/data', function(req, res) {	
+
 // check for querystring in db
 	// if it exists, return relevant cache
 	// else call api
