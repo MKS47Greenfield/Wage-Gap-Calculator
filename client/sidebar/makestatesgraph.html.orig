@@ -25,11 +25,11 @@
       <fieldset class="values">
         <legend>Person {{person.number}}</legend>
         <div ng-repeat="variable in data.selected">
-<<<<<<< 84e3c5aa29a1e8a7e342cafa8e4207808f4e9263
+<<<<<<< 1c7b64562340f7e9b8ccc6ed602dd3adb8502773
           <label>{{variable}}<select ng-model="person[variable]" ng-options="option as option for option in data.options[variable]"></select></label>
 =======
-          <label>{{variable}}<select ng-options="[1,2,3]"></select></label>
->>>>>>> sidebar checkboxes working, issues binding data from person number select
+          <label>{{variable}}<select ng-model="person.variable" ng-options="option as option for option in data.options[variable]"></select></label>
+>>>>>>> profile selects loading proper options
         </div>
       </fieldset>
     </div>
