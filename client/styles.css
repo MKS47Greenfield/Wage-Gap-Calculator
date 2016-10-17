@@ -23,3 +23,9 @@ select{
 =======
 >>>>>>> sidebar checkboxes working, issues binding data from person number select
 }
+fieldset{
+  max-width: 100%;
+}
+select{
+  overflow: scroll;
+}

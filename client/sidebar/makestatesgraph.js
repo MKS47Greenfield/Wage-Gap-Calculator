@@ -92,7 +92,7 @@ angular.module('wageGap.makestatesgraph', [])
         'Public Administration',
         'Military'
       ],
-      Race: ['White','African-American/Black','American Indian/Alaskan Native','Asian','Pacific Islander']
+      Race: ['White','African-American/Black','American Indian/Alaskan Native','Asian','Pacific Islander','Latino']
     }
   };
 
