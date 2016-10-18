@@ -2,11 +2,11 @@
 //since they share so much code in common
 
 angular.module('wageGap.makestatesgraph', [])
-<<<<<<< 5cac7a9acf9512836c145d0120dfcac43e54eb1e
-.controller('MakeStatesGraphController', ['$scope', '$http' function ($scope, $http) {
+<<<<<<< 66ad53e2b2d4505c4a0a79afd1b57b351141c5ea
+.controller('MakeStatesGraphController', ['$scope', '$http', function ($scope, $http) {
 =======
-.controller('MakeStatesGraphController', ['$scope', function ($scope) {
->>>>>>> fixed it, minor heading error in makestatesgraph.js
+.controller('MakeStatesGraphController', ['$scope', '$http' function ($scope, $http) {
+>>>>>>> basic query set up
 
   $scope.data = {
     selected: ['Gender'],
