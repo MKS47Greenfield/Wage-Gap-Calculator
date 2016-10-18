@@ -21,7 +21,6 @@
     <script src="sidebar/makebargraph.js"></script>
     <script src="sidebar/makestatesgraph.js"></script>
     <script src="sidebar/sidebar.js"></script>
-
     <script src="scripts/index.js"></script>
 
   </head>
@@ -29,14 +28,14 @@
   <body ng-app="wageGap">
 
     <aside class="sidebar">
-      <a ui-sref="makebargraph">Bar Graph</a>
-      <a ui-sref="makestatesgraph">States Graph</a>
-
-      <ui-view>
-        <h1>Welcome to the Intersectional Wage Gap Calculator and Graph Builder!</h1>
-      </ui-view>
+      <a ui-sref="home.bargraph">Bar Graph</a>
+      <a ui-sref="home.statesgraph">States Graph</a>
+      <ui-view class="sidebar"></ui-view>
     </aside>
-    <div class="main">
+    <div class="main"></div>
+    <div class="main">Hello Champions!!
+      <div class="bar">Female Income as Percent of Male Income by Age</div>
+    </div>
 
 
   </body>
