@@ -71,6 +71,7 @@
     .attr('class', 'y axis')
     .attr('transform', 'translate(' + (MARGINS.left) + ',0)')
     .call(yAxis);
+  
 
   vis.selectAll('rect')
     .data(barData)
@@ -86,5 +87,7 @@
     .attr('height', function (d) {
       return ((HEIGHT - MARGINS.bottom) - yRange(d.y));
     })
-    .attr('fill', 'grey');
+    .attr('fill', '#ff6666');
+
+    
 
