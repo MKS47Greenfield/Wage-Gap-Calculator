@@ -43,12 +43,18 @@ app.get('/graph', function(req, res) {
 app.get('/data', function(req, res) {
 
 
-	Graph.find(query, function(err))
-		.then(function(item) {
-			return item.income
-		})
-
-		
+	Graph.find(query, function(err, docs) {
+		console.log('sending query to db');
+		if (err) {
+			console.log('error: ', err);
+			res.send('retrieval error');
+		}
+		else {
+			console.log('docs retrieved: ', docs);
+			res.json(docs);
+			console.log('send data')
+		}
+	})
 
 })
 
