@@ -70,6 +70,7 @@
   vis.append('svg:g')
     .attr('class', 'y axis')
     .attr('transform', 'translate(' + (MARGINS.left) + ',0)')
+<<<<<<< c6298541ba6f7cc64225d6bbbc761a3b16a66a1e
     .call(yAxis)
     .append("text")
     .attr("transform", "rotate(-90)")
@@ -79,6 +80,9 @@
     .style("text-anchor", "end")
     .text("Percent of Male Income");
    
+=======
+    .call(yAxis);
+>>>>>>> working on age graph style
   
 
   vis.selectAll('rect')
@@ -96,6 +100,11 @@
       return ((HEIGHT - MARGINS.bottom) - yRange(d.y));
     })
     .attr('fill', '#ff6666');
+<<<<<<< c6298541ba6f7cc64225d6bbbc761a3b16a66a1e
     
 
+=======
+
+    
+>>>>>>> working on age graph style
 
