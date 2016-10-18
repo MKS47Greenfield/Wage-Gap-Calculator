@@ -1,8 +1,18 @@
 //it would be good to refactor to not need two separate controllers/html skeletons for bar and state
 //since they share so much code in common
 
+<<<<<<< 40f673a0c34750169018f35d68677bcf4177b925:client/sidebar/makebargraph.js
+
 angular.module('wageGap.makebargraph', [])
 .controller('MakeBarGraphController', ['$scope', '$http', function ($scope, $http) {
+=======
+angular.module('wageGap.makestatesgraph', [])
+<<<<<<< 5cac7a9acf9512836c145d0120dfcac43e54eb1e
+.controller('MakeStatesGraphController', ['$scope', '$http' function ($scope, $http) {
+=======
+.controller('MakeStatesGraphController', ['$scope', function ($scope) {
+>>>>>>> fixed it, minor heading error in makestatesgraph.js
+>>>>>>> fixed it, minor heading error in makestatesgraph.js:client/sidebar/makestatesgraph.js.orig
 
   $scope.data = {
     selected: ['Gender'],
@@ -49,8 +59,7 @@ angular.module('wageGap.makebargraph', [])
         "IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM",
         "NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
       ]
-    },
-    person: {}
+    }
   };
 
   //initializes empty profiles with selected variables on choosing the number of people to compare
