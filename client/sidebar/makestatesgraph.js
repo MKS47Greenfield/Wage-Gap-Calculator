@@ -2,7 +2,7 @@
 //since they share so much code in common
 
 angular.module('wageGap.makestatesgraph', [])
-.controller('MakeStatesGraphController', [function ($scope) {
+.controller('MakeStatesGraphController', ['$scope', function ($scope) {
 
   $scope.data = {
     selected: ['Gender'],
