@@ -14,7 +14,12 @@ var wageGap = angular.module('wageGap', [
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-    .state('makebargraph', {
+    .state('home', {
+      templateUrl: './../index.html',
+      url: '/',
+      abstract: true
+    })
+    .state('bargraph', {
       templateUrl: './../sidebar/makebargraph.html',
       url: '/bargraph',
       controller: 'MakeBarGraphController'
