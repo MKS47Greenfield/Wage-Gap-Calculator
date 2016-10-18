@@ -8,6 +8,7 @@ var wageGap = angular.module('wageGap', [
   'wageGap.sidebar',
   'wageGap.makestatesgraph',
   'wageGap.makebargraph'
+  // 'wageGap.landing'
 ])
 .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
 
@@ -17,7 +18,7 @@ var wageGap = angular.module('wageGap', [
     .state('home', {
       templateUrl: './../index.html',
       url: '/',
-      controller: 'SidebarController'
+      controller: 'HomeController'
     })
     .state('home.bargraph', {
       templateUrl: './../sidebar/makebargraph.html',
@@ -30,5 +31,5 @@ var wageGap = angular.module('wageGap', [
       controller: 'MakeStatesGraphController'
     });
 }).run(function () {
-
+  
 });
