@@ -18,10 +18,16 @@
   <body ng-app="wageGap">
 
     <aside class="sidebar">
+<<<<<<< 5ecad967fdb597792da45dff7d42f397b6d98e8b
+      <a ui-sref="home.bargraph">Bar Graph</a>
+      <a ui-sref="home.statesgraph">States Graph</a>
+      <ui-view class="sidebar"></ui-view>
+=======
       <a ui-sref="makebargraph">Bar Graph</a>
       <a ui-sref="makestatesgraph">States Graph</a>
       <div ui-view>
       </div>
+>>>>>>> checking out a different commit to see if I can get everything running again from that
     </aside>
     <div class="main"></div>
 
