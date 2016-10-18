@@ -6,7 +6,7 @@ angular.module('wageGap.makebargraph', [])
 .controller('MakeBarGraphController', ['$scope', function ($scope) {
 
   $scope.data = {
-    selected: [],
+    selected: ['Gender'],
     potentials: [
       // 'Age',//leaving out age to decrease the number of necessary API variables for basic skeleton
       'Gender',
@@ -20,22 +20,31 @@ angular.module('wageGap.makebargraph', [])
       // age: ['15-19','20-24','25-29','30-34','35-39','40-44','45-49','50-54','55-59','60-65'],
       Gender: ['Male', 'Female'],
       Occupation: [
-        'Agriculture, Forestry, Fishing, and Hunting, and Mining',
-        'Construction',
-        'Manufacturing',
-        'Wholesale Trade',
-        'Retail Trade',
-        'Transportation and Warehousing and Utilities',
-        'Information',
-        'Finance and Insurance, and Real Estate, and Rental and Leasing',
-        'Professional, Scientific, and Management, and Administrative, and Waste Management Services',
-        'Educational Services, and Health Care and Social Assistance',
-        'Arts, Entertainment, and Recreation, and Accommodation and Food Services',
-        'Other Services, Except Public Administration',
-        'Public Administration',
-        'Military'
+        'Management occupations',
+        'Business and financial operations occupations',
+        'Computer and mathematical occupations',
+        'Architecture and engineering occupations',
+        'Life, physical, and social science occupations',
+        'Community and social services occupations',
+        'Legal occupations',
+        'Education, training, and library occupations',
+        'Arts, design, entertainment, sports, and media occupations',
+        'Healthcare practitioner and technical occupations',
+        'Healthcare support occupations',
+        'Protective service occupations',
+        'Food preparation and serving related occupations',
+        'Building and grounds cleaning and maintenance occupations',
+        'Personal care and service occupations',
+        'Sales and related occupations',
+        'Office and administrative support occupations',
+        'Farming, fishing, and forestry occupations',
+        'Construction and extraction occupations',
+        'Installation, maintenance, and repair occupations',
+        'Production occupations',
+        'Transportation occupations',
+        'Material moving occupations'
       ],
-      Race: ['White','African-American/Black','American Indian/Alaskan Native','Asian','Pacific Islander'],
+      Race: ['White','African-American/Black','American Indian/Alaskan Native','Asian','Pacific Islander','Other'],
       State: [
         "AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID",
         "IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM",
@@ -59,11 +68,13 @@ angular.module('wageGap.makebargraph', [])
 
   //toggles checkboxes
   $scope.toggle = function (item, list) {
-    var i = list.indexOf(item);
-    if(i > -1){
-      list.splice(i, 1);
-    } else {
-      list.push(item);
+    if(item !== 'Gender'){
+      var i = list.indexOf(item);
+      if(i > -1){
+        list.splice(i, 1);
+      } else {
+        list.push(item);
+      }
     }
   };
 

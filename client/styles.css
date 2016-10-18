@@ -18,5 +18,9 @@ fieldset{
   max-width: 100%;
 }
 select{
-  overflow: scroll;
+  text-overflow: ellipsis;
+  width: 90%;
+}
+.profilesnum{
+  width: 20%;
 }
