@@ -8,7 +8,7 @@ angular.module('wageGap.makebargraph', [])
     selected: ['Gender'],
     potentials: [
       // 'Age',//leaving out age to decrease the number of necessary API variables for basic skeleton
-      'Gender',
+      // 'Gender',//making age autoselected for skeleton version
       'Occupation',
       'Race',
       'State'
@@ -66,17 +66,25 @@ angular.module('wageGap.makebargraph', [])
   };
 
   //toggles checkboxes
+  //doesn't toggle gender (auto-included in current model)
+  // $scope.toggle = function (item, list) {
+  //   if(item !== 'Gender'){
+  //     var i = list.indexOf(item);
+  //     if(i > -1){
+  //       list.splice(i, 1);
+  //     } else {
+  //       list.push(item);
+  //     }
+  //   }
+  // };
+
+  //for radio buttons (delete if switched to checkboxes)
   $scope.toggle = function (item, list) {
-    if(item !== 'Gender'){
-      var i = list.indexOf(item);
-      if(i > -1){
-        list.splice(i, 1);
-      } else {
-        list.push(item);
-      }
-    }
+    list.splice(1);
+    list.push(item);
   };
 
+//sends the query to the server
   $scope.query = function () {
     $http({
       method: 'GET',
