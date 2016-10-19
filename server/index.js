@@ -24,7 +24,7 @@ app.get('/', function(req, res) {
 
 // occupation/gender | location/gender | race/gender
 app.get('/graph', function(req, res) {
-	var query = req.body;
+	var query = req.body;});
 
 	Graph.find(query, function(err, docs) {
 		console.log('sending query to db');
