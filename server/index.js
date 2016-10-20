@@ -24,16 +24,8 @@ app.use(express.static('client'));
 
 
 // occupation/gender | location/gender | race/gender
-app.post('/graph', function(req, res) {
+app.get('/graph', function(req, res) {
 	var query = req.body;
-
-	for(var k in query){
-		query[k.toLowerCase()] = query[k];
-		delete query[k];
-	}
-
-	console.log('query: ', query);
-	console.log(Graph.find(query, {income: true}))
 
 	Graph.find(query, function(err, docs) {
 		console.log('sending query to db');
@@ -46,13 +38,14 @@ app.post('/graph', function(req, res) {
 			res.json(docs);
 			console.log('send data')
 		}
-	});
+	})
 
 
 });
 
 // });
 
+});
 
 
 // ORIGINAL API GET REQUEST HANDLER
