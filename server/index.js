@@ -7,7 +7,6 @@ var mongoose = require('mongoose');
 var db = require('../app/models/config.js');
 var Graph = require('../app/models/graph-schema.js');
 
-
 var app = express();
 module.exports = app;
 
@@ -23,7 +22,6 @@ app.use(express.static('client'));
 // });
 
 
-// occupation/gender | location/gender | race/gender
 app.get('/graph', function(req, res) {
 	var query = req.body;
 
@@ -45,7 +43,6 @@ app.get('/graph', function(req, res) {
 
 // });
 
-});
 
 
 // ORIGINAL API GET REQUEST HANDLER
