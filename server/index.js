@@ -22,7 +22,8 @@ app.use(express.static('client'));
 // });
 
 
-app.get('/graph', function(req, res) {
+// occupation/gender | location/gender | race/gender
+app.post('/graph', function(req, res) {
 	var query = req.body;
 
 	Graph.find(query, function(err, docs) {
@@ -37,7 +38,6 @@ app.get('/graph', function(req, res) {
 			console.log('send data')
 		}
 	})
-
 
 });
 
