@@ -2,16 +2,14 @@
   <div class="checkboxes" class="variables-choices">
     <fieldset class="variables">
       <legend>Choose extra attribute to compare (gender included in all):</legend>
-      <div ng-repeat="variable in data.potentials">
-        <label>{{variable}}
-          <input
-            type="radio"
+        <md-radio-group ng-model="data.selected[1]" ng-repeat="variable in data.potentials">
+          <md-radio-button
             ng-click="toggle(variable, data.selected)"
             ng-checked="exists(variable, data.selected)"
-          />
-
-        </label>
-      </div>
+          >
+            {{variable}}
+        </md-radio-button>
+      </md-radio-group>
     </fieldset>
     <label>How many people's profiles do you wish to compare?
       <select

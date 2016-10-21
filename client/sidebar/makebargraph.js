@@ -65,25 +65,6 @@ angular.module('wageGap.makebargraph', [])
     }
   };
 
-  //toggles checkboxes
-  //doesn't toggle gender (auto-included in current model)
-  // $scope.toggle = function (item, list) {
-  //   if(item !== 'Gender'){
-  //     var i = list.indexOf(item);
-  //     if(i > -1){
-  //       list.splice(i, 1);
-  //     } else {
-  //       list.push(item);
-  //     }
-  //   }
-  // };
-
-  //for radio buttons (delete if switched to checkboxes)
-  $scope.toggle = function (item, list) {
-    list.splice(1);
-    list.push(item);
-  };
-
 //sends the query to the server
 $scope.query = function (profile, variable) {
   //set the data to send as only gender and the currently selected other variable
@@ -110,5 +91,24 @@ $scope.query = function (profile, variable) {
   //checks if an variable is in selected array to display it as checked or not
   $scope.exists = function (item, list) {
     return list.indexOf(item) > -1;
+  };
+
+  //toggles checkboxes
+  //doesn't toggle gender (auto-included in current model)
+  // $scope.toggle = function (item, list) {
+  //   if(item !== 'Gender'){
+  //     var i = list.indexOf(item);
+  //     if(i > -1){
+  //       list.splice(i, 1);
+  //     } else {
+  //       list.push(item);
+  //     }
+  //   }
+  // };
+
+  //for radio buttons (delete if switched to checkboxes)
+  $scope.toggle = function (item, list) {
+    list.splice(1);
+    list.push(item);
   };
 }]);
