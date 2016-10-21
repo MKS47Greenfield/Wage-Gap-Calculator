@@ -89,9 +89,9 @@ $scope.query = function (profile, variable) {
 };
 
   //checks if an variable is in selected array to display it as checked or not
-  $scope.exists = function (item, list) {
-    return list.indexOf(item) > -1;
-  };
+  // $scope.exists = function (item, list) {
+  //   return list.indexOf(item) > -1;
+  // };
 
   //toggles checkboxes
   //doesn't toggle gender (auto-included in current model)
@@ -107,8 +107,8 @@ $scope.query = function (profile, variable) {
   // };
 
   //for radio buttons (delete if switched to checkboxes)
-  $scope.toggle = function (item, list) {
-    list.splice(1);
-    list.push(item);
-  };
+  // $scope.toggle = function (item, list) {
+  //   list.splice(1);
+  //   list.push(item);
+  // };
 }]);
