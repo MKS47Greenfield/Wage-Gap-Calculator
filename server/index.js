@@ -3,9 +3,9 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var fs = require('fs');
 var request = require('request');
-// var mongoose = require('mongoose');
-// var db = require('../app/models/config.js');
-// var Graph = require('../app/models/graph-schema.js');
+var mongoose = require('mongoose');
+var db = require('../app/models/config.js');
+var Graph = require('../app/models/graph-schema.js');
 
 
 var app = express();
@@ -26,20 +26,27 @@ app.use(express.static('client'));
 // occupation/gender | location/gender | race/gender
 app.post('/graph', function(req, res) {
 	var query = req.body;
-	console.log(query)
-	res.send(query)
-	// Graph.find(query, function(err, docs) {
-	// 	console.log('sending query to db');
-	// 	if (err) {
-	// 		console.log('error: ', err);
-	// 		res.send('retrieval error');
-	// 	}
-	// 	else {
-	// 		console.log('docs retrieved: ', docs);
-	// 		res.json(docs);
-	// 		console.log('send data')
-	// 	}
-	// })
+
+	for(var k in query){
+		query[k.toLowerCase()] = query[k];
+		delete query[k];
+	}
+
+	console.log('query: ', query);
+	console.log(Graph.find(query, {income: true}))
+
+	Graph.find(query, function(err, docs) {
+		console.log('sending query to db');
+		if (err) {
+			console.log('error: ', err);
+			res.send('retrieval error');
+		}
+		else {
+			console.log('docs retrieved: ', docs);
+			res.json(docs);
+			console.log('send data')
+		}
+	});
 
 
 });
