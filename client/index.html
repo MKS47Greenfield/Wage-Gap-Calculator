@@ -29,11 +29,18 @@
   <body ng-app="wageGap">
 
     <aside class="sidebar">
-      <a ui-sref="makebargraph">Bar Graph</a>
-      <a ui-sref="makestatesgraph">States Graph</a>
-
+      <md-nav-bar md-border-bottom="">
+        <md-nav-item name="home" md-nav-sref="home">
+          Home
+        </md-nav-item>
+        <md-nav-item name="bar graph" md-nav-sref="makebargraph">
+          Bar
+        </md-nav-item>
+        <md-nav-item name="states graph" md-nav-sref="makestatesgraph">
+          States
+        </md-nav-item>
+      </md-nav-bar>
       <ui-view>
-        <h1>Welcome to the Intersectional Wage Gap Calculator and Graph Builder!</h1>
       </ui-view>
     </aside>
     <div class="main">
@@ -46,7 +53,7 @@
           <!-- <!DOCTYPE html>
           <html> -->
           <!-- <meta charset="utf-8"> -->
-          <!-- All work in this directory modified from the original by Pasha https://github.com/NPashaP ,
+          <!-- All work for this graph modified from the original by Pasha https://github.com/NPashaP ,
           original to be found at http://bl.ocks.org/NPashaP/a74faf20b492ad377312 ,
           and thus it is protected and must remain free according to that original creators wishes
           under the GNU General Public License (GPLv3)
@@ -149,7 +156,6 @@
 
 
         </div>
-  <script src="d3charts/d3graphs.js"></script>
   </footer>
 
 
