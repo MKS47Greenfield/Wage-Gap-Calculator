@@ -1,11 +1,13 @@
-//it would be good to refactor to not need two separate controllers/html skeletons for bar and state
+//TODO: it would be good to refactor to not need two separate controllers/html skeletons for bar and state
 //since they share so much code in common
 
 angular.module('wageGap.makebargraph', [])
+//had a lot of difficulty getting this service to inject from the services directory
+//so ended up putting in this file, and finally got it working
 .factory('Graphs', function () {
 
-  var fac = {};
-  fac.barGraph = function (barData) {
+  var factory = {};
+  factory.barGraph = function (barData) {
 
 
     //feed template array called 'barData with objects of x,y values'
@@ -69,7 +71,7 @@ angular.module('wageGap.makebargraph', [])
         .attr('x', -120)
         .attr("dy", ".71em")
         .style("text-anchor", "end")
-        .text("Percent of Male Income")
+        .text("Income (in thousands of dollars)")
         .call(yAxis);
 
 
@@ -91,7 +93,7 @@ angular.module('wageGap.makebargraph', [])
         .attr('fill', '#ff6666');
   };
 
-  return fac;
+  return factory;
   })
 .controller('MakeBarGraphController', ['$scope', '$http', 'Graphs', function ($scope, $http, Graphs) {
 
@@ -141,28 +143,40 @@ angular.module('wageGap.makebargraph', [])
         "NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
       ]
     },
-    newGraphData: {}
+    newGraphData: {},
+    graphIndex: 0
   };
 
   $scope.newBarGraph = function () {
-    console.log('hi');
-      d3.select('.main')
-        .insert('div','.first')
-        .classed('first', true)
-        .classed('bar', true);
-      console.log('graphs?:', Graphs);
+    //TODO: eventually it'd be good to refactor this so the repeated code is an external function
+    d3.select('.main')
+    .insert('div','.states')
+    .classed('first', true)
+    .classed('bar', true);
+    console.log('profilesnum?:', $scope.data.profilesnum);
 
-      var data = $scope.data.options[$scope.data.selected[1]].map(function (option) {
-        var yVal;
-        // var income = $scope.data.fullData.find(function (dataObj) {
-        //   return dataObj[$scope.data.selected[1]] === option;
-        // }).income;
-          return {'x': option, 'y': Math.abs(Math.random()*100)};
-      });
+      var barData;
+      if($scope.data.profilesnum === 0){
+        barData = $scope.data.options[$scope.data.selected[1]].reduce(function (arr, option) {
+          //eventually we should be able to pull income data from server
+          // var yVal;
+          // var income = $scope.data.fullData.find(function (dataObj) {
+          //   return dataObj[$scope.data.selected[1]] === option;
+          // }).income;
+          return arr.concat([
+            {'x': 'Female ' + option, 'y': Math.abs(Math.random()*100)},
+            {'x': 'Male ' + option, 'y': Math.abs(Math.random()*100)}
+          ]);//currently using dummy data
+        },[]);
 
-      Graphs.barGraph(data);
+      } else {
+        barData = $scope.data.profiles.map(function (profile) {
+          return {'x': profile.Gender + ' ' + profile[$scope.data.selected[1]], 'y': Math.abs(Math.random()*100)}
+        });
+      }
+      console.log(barData);
 
-      d3.select('.states').classed('first', false);
+      Graphs.barGraph(barData);
 
   };
 
@@ -187,6 +201,11 @@ $scope.query = function (profile, variable) {
   };
   dataToSend[variable] = profile[variable];
 
+
+//we couldn't get the database working but this ajax
+//does successfully send the data to the server and
+//get the response, as you'll see in the front and server-side
+//console logs
   $http({
     method: 'POST',
     url: '/graph',
